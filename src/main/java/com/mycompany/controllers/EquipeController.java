@@ -21,6 +21,7 @@ public class EquipeController {
     EquipeDao equipeDao;
 
 
+
     private static Iterable<Equipe> list=new ArrayList<Equipe>();
 
 

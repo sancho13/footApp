@@ -4,9 +4,12 @@
 
 var app=angular.module('helloJS',[]);
 
+
 app.controller('Hello',function ($scope, $http) {
-    $http.get('http://rest-service.guides.spring.io/greeting').
-    success(function(data) {
-        $scope.equipe = data;
-    });
+
+  $http.get('http://localhost:8080/equipes/1').
+  success(function(data) {
+      $scope.equipe = data;
+  });
+
 });
