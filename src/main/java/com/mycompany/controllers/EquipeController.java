@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Created by Marseillais on 01/06/2016.
  */
 @Controller
-@RequestMapping(value = "/equipes")
+@RequestMapping(value = "/api/equipes")
 public class EquipeController {
 
 
