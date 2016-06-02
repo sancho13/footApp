@@ -8,9 +8,10 @@
 <body ng-app="helloJS">
 <div ng-controller="Hello">
     <p>The ID is {{equipe.id}}</p>
-    <p>The name is {{equipe.name}}</p>
-    <p>The color  is {{equipe.color}}</p>
+    <p>The name is {{equipe.name }}</p>
+    <p>The color  is {{equipe.color | uppercase }}</p>
 
+<input ng-model="search.name" placeholder="filter...">
 
 <table class="table table-bordered"
        infinite-scroll="loadMore()"
@@ -28,7 +29,7 @@
         <th class="col-4">Color</th >
     </tr >
 
-    <tr ng-repeat="eq in equipes">
+    <tr ng-repeat="eq in equipes | filter:search">
 
         <td >{{ eq.name }}</td >
         <td >{{ eq.year }}</td >
@@ -37,6 +38,7 @@
 
 
 </table >
+    <button ng-click="test()" type="submit">Test</button>
 </div>
 
 

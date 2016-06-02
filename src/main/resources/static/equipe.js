@@ -4,6 +4,9 @@
 var app = angular.module('helloJS', []);
 
 
+
+
+
 // Déclarer le service EquipeService pour centraliser les accès aux APIs
 app.factory('EquipeService', function ($http) {
 
@@ -26,6 +29,10 @@ app.factory('EquipeService', function ($http) {
 // Ce controlleur dépend de $scope et de EquipeService pour pouvoir appeler les méthodes list et get
 app.controller('Hello', function ($scope, EquipeService) {
 
+    $scope.test= function()
+    {
+            console.log("Test ngClick");
+    }
 
     // Get la liste des équipes
     EquipeService.list().success(function (data) {
